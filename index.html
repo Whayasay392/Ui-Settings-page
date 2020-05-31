@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings page</title>
+    <link rel="stylesheet" href=" https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/74091f2b8e.js"></script>
+    <script>
+         function myTime() {
+            let today = new Date();
+            let h = today.getHours();
+            let m = today.getMinutes();
+            m = checkTime(m);
+            document.querySelector('a').innerHTML= h + ":" + m;
+            let t = setTimeout(myTime, 500);
+        }
+        function checkTime(i) {
+            if (i<10) {i="0"+i};
+            return i;
+        }
+    </script>
+
+</head>
+<body onload="myTime()">
+    <section class="main-container">
+        <header>
+            <section class="top-section">
+            <div id="topleft-bars">
+                <ul>
+                    <li><i class="fas fa-signal"></i></li>
+                    <li><p class="sketch">Sketch</p></li>
+                    <li><i class="fas fa-wifi"></i></li>
+                </ul>
+                
+            </div>
+            <div id="topcenter-bars">
+                <a>9:41</a> 
+            </div>
+            <div id="topright-bars">
+                <ul>
+                    <li><i class="fab fa-bluetooth-b"></i></li>
+                    <li><p class="bar">100%</p></li>
+                    <li><i class="fas fa-battery-full"></i></li>
+                </ul>
+            </div>
+        </section>
+        <br>
+        <h3><i style="font-size: 0.8rem; margin-right: 5px;" class="fas fa-arrow-left"></i>Settings</h3>
+        </header>
+        <section class="inside-container">
+            <div class="container">
+            <img src="general.png" alt=""><p class="text">General</p><i style="color: darkgrey; float: right;" class="fas fa-chevron-right"></i><br>
+            <img src="notification.png" alt=""><p class="text">Notifications</p><i style="color: darkgrey; float: right; " class="fas fa-chevron-right"></i><br>
+            <img src="screentime.png" alt=""><p class="text">Screen time </p><i style="color: darkgrey; float: right;" class="fas fa-chevron-right"></i><br>
+            <img src="language.png" alt=""><p class="text">Language & Religion </p><i style="color: darkgrey; float: right;" class="fas fa-chevron-right"></i><br>
+            <img src="music.png" alt=""><p class="text">Sound</p><i style="color: darkgrey; float: right;" class="fas fa-chevron-right"></i><br>
+            <img src="sharing.png" alt=""><p class="text">Sharing</p><i style="color: darkgrey; float: right;" class="fas fa-chevron-right"></i><br>
+            <img src="date.png" alt=""><p class="text">Date & Time</p><i style="color: darkgrey; float: right; " class="fas fa-chevron-right"></i><br>
+            </div>
+        </section>
+    </section>
+</body>
+</html>
